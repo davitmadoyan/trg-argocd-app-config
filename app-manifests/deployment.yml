@@ -16,4 +16,4 @@ spec:
         - name: myapp
           image: davitmadoyan/trg-task:1.0.1
           ports:
-            - containerPort: 8080
+            - containerPort: 8085
