@@ -1,0 +1,1 @@
+# trg-argocd-app-config
