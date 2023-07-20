@@ -2,7 +2,7 @@ apiVersion: traefik.io/v1alpha1
 kind: Middleware
 metadata:
   name: ipwhitelist
-  # namespace: myapp
+  namespace: myapp
 spec:
   ipWhiteList:
     sourceRange:
@@ -15,10 +15,10 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: myapp-ingress
-  # namespace: myapp
+  namespace: myapp
   annotations:
     kubernetes.io/ingress.class: traefik
-    "traefik.ingress.kubernetes.io/router.middlewares": default-ipwhitelist@kubernetescrd
+    "traefik.ingress.kubernetes.io/router.middlewares": myapp-ipwhitelist@kubernetescrd
 spec:
   rules:
     - http:
