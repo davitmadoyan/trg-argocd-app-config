@@ -8,6 +8,6 @@ spec:
     app: "{{ .Chart.Name }}"
   type: "{{ .Values.service.type }}"
   ports:
-    - port: "{{ .Values.service.port }}"
+    - port: {{ .Values.service.port }}
       protocol: '{{ .Values.service.protocol | default "TCP" }}'
-      targetPort: { { .Values.service.targetPort } }
+      targetPort: {{ .Values.service.targetPort }}
